@@ -23,4 +23,4 @@ Features is an open source Discord bot. It was made for people getting started w
 
 ## Supported Commands
 
-`+start`
+<i>The commands will be updated soon.</i>

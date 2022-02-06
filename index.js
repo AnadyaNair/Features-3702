@@ -1,7 +1,6 @@
 // Require the necessary discord.js classes
 const fs = require("fs");
 const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
-// const { Client, Intents } = require("discord.js");
 const { token, Prefix } = require("./config.json");
 
 // Create a new client instance
@@ -24,7 +23,7 @@ for (const file of commandFiles) {
 // When the client is ready, run this code (only once)
 client.once("ready", () => {
   console.log(`Ready as ${client.user.tag}!`);
-  client.user.setActivity("+start", { type: "LISTENING" });
+  client.user.setActivity("/start", { type: "LISTENING" });
 });
 
 client.on("interactionCreate", async (interaction) => {
@@ -43,17 +42,6 @@ client.on("interactionCreate", async (interaction) => {
       ephemeral: true,
     });
   }
-  // if (!interaction.isCommand()) return;
-
-  // const { commandName } = interaction;
-
-  // if (commandName === "ping") {
-  //   await interaction.reply("Pong!");
-  // } else if (commandName === "server") {
-  //   await interaction.reply("Server info.");
-  // } else if (commandName === "user") {
-  //   await interaction.reply("User info.");
-  // }
 });
 
 // client.on("messageCreate", (message) => {
@@ -61,37 +49,37 @@ client.on("interactionCreate", async (interaction) => {
 //     message.reply(`Pong 🏓! **${client.ws.ping}ms**.`);
 //   }
 
-//   if (message.content == Prefix + "start") {
-//     const { MessageEmbed } = require("discord.js");
+// if (message.content == Prefix + "start") {
+//   const { MessageEmbed } = require("discord.js");
 
-//     const startEmbed = new MessageEmbed()
-//       .setColor("#57F287")
-//       .setTitle("Hey there, I am Features.")
-//       .setAuthor({
-//         name: "Features",
-//         iconURL:
-//           "https://github.com/AnadyaNair/Features-3702/blob/main/Features-Bot-Logo.png?raw=true",
-//       })
-//       .setDescription(
-//         'Hey there, I am Features. I was built to help you get started with Discord. This is my directory from where you can pick your Discord lesson. Remember to use my prefix "+" while you call me.\n\nPlease Note: I am not a bot made by the official Discord staff.'
-//       )
-//       .setThumbnail(
-//         "https://github.com/AnadyaNair/Features-3702/blob/main/Features-Bot-Logo.png?raw=true"
-//       )
-//       .addFields({
-//         name: "Features Lesson Directory",
-//         value: "``+lessons``",
-//         inline: true,
-//       })
-//       .setTimestamp()
-//       .setFooter({
-//         text: "Hey there, I am Features.",
-//         iconURL:
-//           "https://github.com/AnadyaNair/Features-3702/blob/main/Features-Bot-Logo.png?raw=true",
-//       });
+//   const startEmbed = new MessageEmbed()
+//     .setColor("#57F287")
+//     .setTitle("Hey there, I am Features.")
+//     .setAuthor({
+//       name: "Features",
+//       iconURL:
+//         "https://github.com/AnadyaNair/Features-3702/blob/main/Features-Bot-Logo.png?raw=true",
+//     })
+//     .setDescription(
+//       'Hey there, I am Features. I was built to help you get started with Discord. This is my directory from where you can pick your Discord lesson. Remember to use my prefix "+" while you call me.\n\nPlease Note: I am not a bot made by the official Discord staff.'
+//     )
+//     .setThumbnail(
+//       "https://github.com/AnadyaNair/Features-3702/blob/main/Features-Bot-Logo.png?raw=true"
+//     )
+//     .addFields({
+//       name: "Features Lesson Directory",
+//       value: "``+lessons``",
+//       inline: true,
+//     })
+//     .setTimestamp()
+//     .setFooter({
+//       text: "Hey there, I am Features.",
+//       iconURL:
+//         "https://github.com/AnadyaNair/Features-3702/blob/main/Features-Bot-Logo.png?raw=true",
+//     });
 
-//     message.reply({ embeds: [startEmbed] });
-//   }
+//   message.reply({ embeds: [startEmbed] });
+// }
 // });
 
 // Login to Discord with your client's token

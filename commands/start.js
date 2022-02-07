@@ -23,7 +23,7 @@ module.exports = {
       )
       .addFields({
         name: "Features Lesson Directory",
-        value: "``+lessons``",
+        value: "``/lessons``",
         inline: true,
       })
       .setTimestamp()

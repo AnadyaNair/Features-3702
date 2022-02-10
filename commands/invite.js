@@ -1,18 +1,27 @@
-const {
-  SlashCommandBuilder,
-  MessageActionRow,
-  MessageButton,
-} = require("@discordjs/builders");
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("invite")
     .setDescription("Invite me to your server."),
   async execute(interaction) {
-    await interaction.reply({
-      content:
-        "Add me to your server: https://discord.com/api/oauth2/authorize?client_id=937258591189106698&permissions=137439333440&scope=bot",
+    const row = new MessageActionRow().addComponents(
+      new MessageButton()
+        .setLabel("Invite Features#3702")
+        .setURL(
+          "https://discord.com/api/oauth2/authorize?client_id=937258591189106698&permissions=137439333440&scope=bot"
+        )
+        .setStyle("LINK")
+    );
+    const inviteEmbed = new MessageEmbed()
+      .setColor("#5865F2")
+      .setTitle("Invitation Link")
+      .setDescription("Click the button below to invite me to your server.");
+    content: await interaction.reply({
       ephemeral: true,
+      embeds: [inviteEmbed],
+      components: [row],
     });
   },
 };

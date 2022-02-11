@@ -8,29 +8,30 @@ module.exports = {
   async execute(interaction) {
     const exampleEmbed = new MessageEmbed()
       .setColor("#5865F2")
-      .setTitle("Features Lesson Directory")
-      // .setURL("https://discord.js.org/")
+      .setTitle("🎒 Features Lesson Directory")
       .setAuthor({
         name: "Features",
         iconURL:
-          "https://github.com/AnadyaNair/Features-3702/blob/main/Features-logo-dark.png?raw=true",
-        // url: "https://discord.js.org",
+          "https://github.com/AnadyaNair/Features-3702/blob/main/FeaturesLogo128p.png?raw=true",
       })
       .setDescription(
         "Helping you get started with Discord. Please use the commands listed below for help."
       )
-      .setThumbnail(
-        "https://github.com/AnadyaNair/Features-3702/blob/main/Features-logo-dark.png?raw=true"
-      )
+      // .setThumbnail(
+      //   "https://github.com/AnadyaNair/Features-3702/blob/main/FeaturesLogo128p.png?raw=true"
+      // )
       .addFields(
         {
-          name: "Section 1: What is Discord?",
-          value: "Learning about Discord ``what-is-discord``",
-        },
-        // { name: "\u200B", value: "\u200B" },
-        { name: "About", value: "``/lessons part: sec1-about``", inline: true },
-        { name: "Inline field title", value: "Some value here", inline: true },
-        { name: "Inline field title", value: "Some value here", inline: true }
+          name: "Lesson-1: What is Discord?",
+          value:
+            "**About:** Learning about Discord\n**Access:** ``/what-is-discord``",
+          inline: true,
+        }
+        // { name: "\u200B", value: "\u200B" }
+
+        // { name: "About", value: "``/lessons part: sec1-about``", inline: true },
+        // { name: "Inline field title", value: "Some value here", inline: true },
+        // { name: "Inline field title", value: "Some value here", inline: true }
       )
       // .addFields(
       //   { name: "\u200B", value: "\u200B" },
@@ -41,12 +42,12 @@ module.exports = {
       // )
       // .addField("Inline field title", "Some value here", true)
       // .setImage("https://i.imgur.com/AfFp7pu.png")
-      .setTimestamp()
-      .setFooter({
-        text: "Features Lesson Directory",
-        iconURL:
-          "https://github.com/AnadyaNair/Features-3702/blob/main/Features-logo-dark.png?raw=true",
-      });
+      .setTimestamp();
+    // .setFooter({
+    //   text: "Features Lesson Directory",
+    //   iconURL:
+    //     "https://github.com/AnadyaNair/Features-3702/blob/main/Features-logo-dark.png?raw=true",
+    // });
 
     // channel.send({ embeds: [exampleEmbed] });
     await interaction.reply({ embeds: [exampleEmbed] });

@@ -16,6 +16,11 @@ module.exports = {
     );
     const inviteEmbed = new MessageEmbed()
       .setColor("#5865F2")
+      .setAuthor({
+        name: "Features",
+        iconURL:
+          "https://github.com/AnadyaNair/Features-3702/blob/main/FeaturesLogo128p.png?raw=true",
+      })
       .setTitle("Invitation Link")
       .setDescription("Click the button below to invite me to your server.");
     content: await interaction.reply({

@@ -15,4 +15,4 @@ Features is an open source Discord bot. It was made for people getting started w
 
 ## Supported Commands
 
-`/beep`, `/invite`, `/lessons`, `/ping`, `/start`
+`/beep`, `/invite`, `/lessons`, `/ping`, `/start`, `what-is-discord`
